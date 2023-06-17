@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body align="center" bgcolor="pink">
+<h2>STORE FORM</h2>
+<form action="Register" method="post">
+    {% csrf_token %}
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Enter your name"><br>
+    <label>Date of Birth:</label>
+     <input type="date" name="dob" placeholder="Enter your dob"><br>
+    <label>Age:</label>
+     <input type="text" name="age" placeholder="Enter your age"><br>
+    <label>gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+        <label>Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+        <label >Female</label><br>
+     <input type="text" name="phonenum" placeholder="Enter your phonenum"><br>
+     <input type="email" name="email" placeholder="Enter your email"><br>
+     <input type="text" name="address" placeholder="Enter your address"><br>
+     <label >Department:</label>
+    <select name="department" id="department">
+        <option value="Computer Science">Computer</option>
+        <option value="EEE">EEE</option>
+        <option value="Civil">Civil</option>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Industrial">Industrial</option>
+
+    </select><br>
+     <label >Purpose:</label>
+    <select name="department" id="department">
+        <option value="Enquiry">Enquiry</option>
+        <option value="Place order">Place order</option>
+        <option value="Return">Return</option>
+
+
+    </select><br>
+    <label>Materials provide</label>
+    <input type="checkbox" id="debit note" name="debit note" value="Debit  Notebook">
+  <label > Debit Notebook</label><br>
+  <input type="checkbox" id="pen" name="pen" value="Pen">
+  <label > Pen</label><br>
+    <input type="submit">
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+</body>
+</html>

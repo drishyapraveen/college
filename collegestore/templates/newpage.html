@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="new" method="post">
+    {% csrf_token %}
+ <button class="sign-in-btn mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored" href="crendentials/new">
+      Add Details
+ </button>
+{% endblock %}
